@@ -1,0 +1,26 @@
+{
+  "_axios-4d564c32.js": {
+    "file": "assets/axios-4d564c32.js"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-56a5be46.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-f6de991e.js",
+    "imports": [
+      "_axios-4d564c32.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/diagramLoader.js": {
+    "file": "assets/diagramLoader-721a4dfa.js",
+    "imports": [
+      "_axios-4d564c32.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/diagramLoader.js"
+  }
+}
