@@ -14,9 +14,16 @@
                 <div class="px-6 text-gray-900 font-bold">
                     {{ __("Mis diagramas") }}
                     @forelse ($diagrams as $diagram)
-                        <div class="bg-gray-100 p-2 border rounded-lg mt-2">
-                            <a href="{{ route('diagram.show', $diagram->id) }}" class="text-gray-900 hover:text-gray-500 text-md hover:text-lg">{{$diagram->name}}</a>
-                            <p class="text-sm text-gray-400">{{$diagram->description}}</p>
+                        <div class="bg-gray-100 p-2 border rounded-lg mt-2 flex justify-between">
+                            <div>
+                                <a href="{{ route('diagram.show', $diagram->id) }}" class="text-gray-900 hover:text-gray-500 text-md hover:text-lg">{{$diagram->name}}</a>
+                                <p class="text-sm text-gray-400">{{$diagram->description}}</p>
+
+                            </div>
+                            <form action="/diagrams/{{$diagram->id}}/delete" method="POST">
+                                @csrf
+                                <input type="submit" value="Eliminar" class="bg-red-500 text-white p-3 rounded-lg">
+                            </form>
                         </div>
                     @empty
                         <div class=" text-white bg-red-700 p-2 rounded-lg">

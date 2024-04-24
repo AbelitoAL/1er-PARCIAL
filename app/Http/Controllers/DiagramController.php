@@ -94,8 +94,10 @@ class DiagramController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        //
+       
+        Diagram::destroy($id);
+        return redirect()->route('diagram.index');
     }
 }

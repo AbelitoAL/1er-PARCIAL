@@ -29,6 +29,7 @@ Route::post('/diagrams/store', [DiagramController::class, 'store'] )->middleware
 Route::get('/diagrams/show/{diagram}', [DiagramController::class, 'show'] )->middleware(['auth', 'verified'])->name('diagram.show');
 Route::post('/diagrams/update/{diagram}', [DiagramController::class, 'update'] )->name('diagram.update');
 Route::post('/diagrams/invite', [DiagramController::class, 'invite'] )->name('diagram.invite');
+Route::post('/diagrams/{id}/delete', [DiagramController::class,'destroy'])->name('diagram.delete');
 
 Route::get('/graph', function () {
     return view('graph');
